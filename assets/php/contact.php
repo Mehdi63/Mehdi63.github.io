@@ -59,7 +59,7 @@ else
 	// formulaire envoyé, on récupère tous les champs.
 	$nom     = (isset($_POST['nom']))     ? Rec($_POST['nom'])     : '';
 	$email   = (isset($_POST['email']))   ? Rec($_POST['email'])   : '';
-	$objet   ='test'; /* (isset($_POST['objet']))   ? Rec($_POST['objet'])   : '';*/
+	$objet   = (isset($_POST['objet']))   ? Rec($_POST['objet'])   : '';
 	$message = (isset($_POST['message'])) ? Rec($_POST['message']) : '';
 
 	// On va vérifier les variables et l'email ...

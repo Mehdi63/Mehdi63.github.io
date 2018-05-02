@@ -50,11 +50,12 @@ function reset_pass()
 function contact()
 {
 	nom = $('#name').val();
-	mail= $('#email').val();
-	msg=$('#message').val();
+	email= $('#email').val();
+	message=$('#message').val();
+  objet=$('#objet').val();
 	if(nom==""||mail==""||msg=="")return alert("Formulaire incomplet !");
 	$('#form_contact').html("Envoi du mail...");
-	$.post('./assets/php/contact.php', {nom:nom,email:mail,message:msg},function(data){
+	$.post('./assets/php/contact.php', {nom:nom,email:email,message:message,objet:objet},function(data){
 		$('#form_contact').html("Mail envoyé ! Vous allez recevoir une copie par email et une réponse au plus vite.");
 	});
 }
